@@ -1,5 +1,4 @@
-from ast import Interactive
-
+import requests
 
 valid_teacher_emails = ['julia.rachkovskiy@gcpsk12.org', 'elfi.funk@gcpsk12.org', 'jeff.burmester@gcpsk12.org', 'bradley.kastner@gcpsk12.org', 'hbagalkote@gmail.com'] # my email for test
 
@@ -15,3 +14,13 @@ def main():
         main()
     
     # send post request
+    payload = {
+        'student_id': student_id,
+        'fname': fname,
+        'lname': lname,
+        'intervention_teacher': intervention_teacher
+    }
+    requests.post('http://127.0.0.1:5000/form_filled', json=payload)
+
+
+main()
