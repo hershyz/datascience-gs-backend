@@ -1,0 +1,17 @@
+div {
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    width: 500px;
+}
+
+button {
+    font-size: 20px;
+}
