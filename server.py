@@ -13,7 +13,7 @@ def form_filled():
     print(data['fname'])
     print(data['lname'])
     print(data['intervention_teacher'])
-    return 'ok'
+    return 'res ok'
 
 if __name__ == "__main__":
     app.run()
