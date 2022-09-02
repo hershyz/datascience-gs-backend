@@ -1,6 +1,8 @@
 from flask import Flask, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def default():
@@ -10,11 +12,7 @@ def default():
 def form_filled():
     
     data = request.json
-    
-    # print(data['student_id'])
-    # print(data['fname'])
-    # print(data['lname'])
-    # print(data['intervention_teacher'])
+    print('recieved: ' + str(data)) # test
 
     student_id = str(data['student_id'])
     fname = str(data['fname'])
