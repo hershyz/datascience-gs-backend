@@ -32,5 +32,3 @@ for i in range(1, len(lines)):
     
     if teacher_email not in dict:
         dict[teacher_email] = [student_name]
-
-print(dict)
