@@ -1,31 +1,51 @@
-<!doctype html>
-<title>Guided Study Intervention Form</title>
-
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guided Study Intervention Form</title>
+    <link rel= "stylesheet" href="style.css" />
+    <script src="script.js"></script>
+</head>
 
 <body>
-    <div>
-        <br>
-        <br>
-        <br>
-        <h1>Guided Study Intervention Form</h1>
-        <br>
-        <br>
-        <br>
-        <input type="text" placeholder="Student ID" id="student_id">
-        <br>
-        <br>
-        <input type="text" placeholder="First Name" id="fname">
-        <br>
-        <br>
-        <input type="text" placeholder="Last Name" id="lname">
-        <br>
-        <br>
-        <input type="text" placeholder="Intervention Teacher Email" id="intervention_teacher">
-        <br>
-        <br>
-        <br>
-        <button onclick="clickFunction()">Submit</button>
-    </div>
+    <form class="intervention-form">
+        <div class="form-header">
+            <h1>Guided Study Intervention Form</h1>
+        </div>
+        <div class="form-body">
+            <div class="row">
+                <div class="input-group">
+                    <label>Student ID</label>
+                    <input type="text" placeholder="Enter your student ID" id="student_id" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <label>First Name</label>
+                    <input type="text" placeholder="Enter your first name" id="fname" required>
+                </div>
+                <div class="input-group">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Enter your last name" id="lname" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <label>Intervention Teacher Email</label>
+                    <input type="email" placeholder="Enter the intervention teacher email" id="intervention_teacher" required>
+                    <!-- <input list="email" placeholder="Enter the intervention email" id="intervention_teacher" required>
+                    <datalist id="email">
+                        <option value="jeff.burmester@g.gcpsk12.org"></option>
+                        <option value="julia.rachkovskiy@g.gcpsk12.org"></option>
+                    </datalist> -->
+                </div>
+            </div>
+        </div>
+        <div class="form-footer">
+            <button class="btn" onclick="clickFunction()">SUBMIT</button>
+        </div>
+    </form>
 </body>
+</html>
