@@ -1,0 +1,18 @@
+h1 {
+    font-family: Raleway;
+}
+
+div {
+    text-align: center;
+}
+
+input {
+    font-family: Raleway;
+    font-size: 30px;
+    width: 500px;
+}
+
+button {
+    font-family: Raleway;
+    font-size: 20px;
+}

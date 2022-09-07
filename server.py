@@ -12,7 +12,6 @@ def default():
 def form_filled():
     
     data = request.json
-    print('recieved: ' + str(data)) # test
 
     student_id = str(data['student_id'])
     fname = str(data['fname'])
@@ -24,5 +23,37 @@ def form_filled():
     
     return 'res ok'
 
+@app.route('/get_students', methods=['POST'])
+def get_students():
+
+    data = request.json
+    gcps_email = str(data['gcps_email']).lower()
+    students = []
+    student_fname = 1
+    student_lname = 2
+    intervention_teacher = 3
+
+    db = open('db.csv', 'r')
+    raw = db.readlines()
+    lines = []
+    for line in raw:
+        line = str.replace(line, '\n', '')
+        lines.append(line)
+
+    for i in range(1, len(lines)):
+        raw = lines[i]
+        line = raw.split(',')
+        if line[intervention_teacher] == gcps_email:
+            student_full_name = line[student_fname] + ' ' + line[student_lname]
+            students.append(student_full_name)
+
+    return str(students)
+
+
+
+
+
+
+# run
 if __name__ == "__main__":
     app.run()
