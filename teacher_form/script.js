@@ -12,6 +12,7 @@ function clickFunction() {
     raw = xhr.responseText;
     raw = raw.replace('[', '');
     raw = raw.replace(']', '');
+    raw = raw.replace(/[']/g, '') // regex
     
     document.write("<strong>Guided Study List for " + email + ":</strong><br>")
     const names = raw.split(', ');

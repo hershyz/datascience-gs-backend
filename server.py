@@ -52,8 +52,26 @@ def get_students():
 
     return str(students)
 
+@app.route('/<var_url>')
+def parameter(var_url):
+    
+    # format: fname_lname_status
+    '''
+        statuses:
+        present
+        absent
+        not required
+    '''
 
+    raw_arr = var_url.split('_')
+    print('DEBUG: ' + str(raw_arr) + ' ' + str(len(raw_arr)))
+    fname = raw_arr[0]
+    lname = raw_arr[1]
+    status = raw_arr[2]
 
+    attendance = open('attendance.csv', 'a')
+    attendance.write(fname + ',' + lname + ',' + status + '\n')
+    return fname + ' ' + lname + ' marked as ' + status
 
 
 
