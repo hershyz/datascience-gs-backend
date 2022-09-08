@@ -17,6 +17,14 @@ function clickFunction() {
     document.write("<strong>Guided Study List for " + email + ":</strong><br>")
     const names = raw.split(', ');
     for (var i = 0; i < names.length; i++) {
-        document.write(names[i] + "<br>");
+
+        var name_raw = names[i].split(" ");
+        var fname = name_raw[0];
+        var lname = name_raw[1];
+        var present_link = '<a href="http://127.0.0.1:5000/' + fname + '_' + lname + '_present">Present</a>';
+        var absent_link = '<a href="http://127.0.0.1:5000/' + fname + '_' + lname + '_absent">Absent</a>';
+        var wrong_location_link = '<a href="http://127.0.0.1:5000/' + fname + '_' + lname + '_wronglocation">I did not request this student</a>';
+
+        document.write(names[i] + ' - ' + present_link + ', ' + absent_link + ', ' + wrong_location_link + "<br>");
     }
 }
