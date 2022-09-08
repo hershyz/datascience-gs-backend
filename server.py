@@ -47,6 +47,9 @@ def get_students():
             student_full_name = line[student_fname] + ' ' + line[student_lname]
             students.append(student_full_name)
 
+    if len(students) == 0:
+        return "no students signed up"
+
     return str(students)
 
 
