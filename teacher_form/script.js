@@ -13,6 +13,7 @@ function clickFunction() {
     raw = raw.replace('[', '');
     raw = raw.replace(']', '');
     
+    document.write("<strong>Guided Study List for " + email + ":</strong><br>")
     const names = raw.split(', ');
     for (var i = 0; i < names.length; i++) {
         document.write(names[i] + "<br>");
