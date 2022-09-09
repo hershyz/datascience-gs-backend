@@ -1,18 +1,99 @@
-h1 {
-    font-family: Raleway;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+margin:0;
+box-sizing:border-box;
+font-family: 'Poppins', sans-serif;
 }
 
-div {
+body{
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, hsl(167, 63%, 51%), #c4e0e5);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.teacher-form{
+    background-color: white;
+    max-width: 600px;
+    flex:1;
+    border-radius: 10px;
+    padding-top:5px;
+    margin-top:auto;
+    margin-bottom: auto;
+    box-shadow: 0 4px 8px 5px rgba(0,0,0,0.2), 0 6px 20px 5px rgba(0,0,0,0.19);
+}
+
+.form-beginning{
+    border-bottom: 1px solid #cccccc;
+    padding: 15px 0;
+    }
+
+h1{
     text-align: center;
 }
 
-input {
-    font-family: Raleway;
-    font-size: 30px;
-    width: 500px;
+.form-beginning{
+    padding-bottom: 10px;
 }
 
-button {
-    font-family: Raleway;
-    font-size: 20px;
+.input-group{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    margin: 10px 5px;
+}
+
+label{
+    font-weight: 1000;
+    padding-bottom: 3px;
+    padding-left: 4px;
+}
+
+input[type="email"]{
+    width: 100%;
+    font-size:15px;
+    height:34px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:5px;
+    color:rgb(109, 109, 109);
+    border:1px solid #ccc;
+    border-radius:6px;
+    background-color: #fdfdfd;
+    outline:none;
+    border-bottom-width: 2px;
+}
+
+::placeholder{
+    color:rgb(116, 116, 116);
+    font-size: 15px;
+    }
+
+.form-end{
+    display:flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.btn{
+    padding:5px 10px;
+    background-color: #13a581;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    color:aliceblue;
+    cursor:pointer;
+}
+
+@media only screen and (max-width:600px){
+    .row{
+    flex-direction: column;
+    }
+    
+    .btn{
+        flex:1;
+    }
 }

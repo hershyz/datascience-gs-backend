@@ -12,10 +12,10 @@ function clickFunction() {
 
     // check to see email exists within list
     intervention_teacher = intervention_teacher.toLowerCase();
-    if (!emails.includes(intervention_teacher)) {
-        alert("Invalid teacher email." + "\n" + "Valid emails are: " + emails);
-        return;
-    }
+    // if (!emails.includes(intervention_teacher)) {
+    //     alert("Invalid teacher email." + "\n" + "Valid emails are: " + emails);
+    //     return;
+    // }
 
     // send post request
     var xhr = new XMLHttpRequest();

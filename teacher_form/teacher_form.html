@@ -1,23 +1,39 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <script src="script.js"></script>
 <link rel="stylesheet" href="style.css">
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div>
-    <h1>Teacher Guided Study Form</h1>
-    <input type="text" placeholder="GCPS Email" id="email">
-    <br>
-    <br>
-    <button onclick="clickFunction()">Submit</button>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Guided Study Form</title>
+</head>
+<body>
+    <form class="teacher-form">
+        <div class="form-beginning">
+            <h1>Teacher Guided Study Form</h1>
+        </div>    
+        <div class="form-body">
+            <div class="input-group">
+                <label>Teacher GCPS Email</label>
+                <!-- <input list="email" placeholder="Enter your GCPS email" id="email" required>
+                <datalist id="list_id">
+                    <option value="jeff.burmester@g.gcpsk12.org"></option>
+                    <option value="julia.rachkovskiy@g.gcpsk12.org"></option>
+                </datalist> -->
+                <input list="email" placeholder="Enter your GCPS email" id="intervention_teacher" required>
+                    <datalist id="email">
+                        <option value="jeff.burmester@g.gcpsk12.org"></option>
+                        <option value="julia.rachkovskiy@g.gcpsk12.org"></option>
+                    </datalist>
+            </div>
+        </div>
+        <div class="form-end">
+            <button class="btn" onclick="clickFunction()">SUBMIT</button>
+        </div>
+    </form>
+</body>
+</html>
+<!DOCTYPE html>

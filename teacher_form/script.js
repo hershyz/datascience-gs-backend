@@ -2,7 +2,7 @@ console.log('script loaded');
 
 function clickFunction() {
     
-    var email = document.getElementById("email").value;
+    var email = document.getElementById("intervention_teacher").value;
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "http://127.0.0.1:5000/get_students", false);
     xhr.setRequestHeader('Content-Type', 'application/json');
