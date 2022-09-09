@@ -10,6 +10,13 @@ function clickFunction() {
         'gcps_email': email
     }));
     raw = xhr.responseText;
+
+    if (raw.responseText == 'no students signed up') {
+        document.write("<strong>Guided Study List for " + email + ":</strong><br>")
+        document.write('no students signed up')
+        return
+    } 
+
     raw = raw.replace('[', '');
     raw = raw.replace(']', '');
     raw = raw.replace(/[']/g, '') // regex
