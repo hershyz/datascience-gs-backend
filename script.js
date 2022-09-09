@@ -1,7 +1,5 @@
 console.log('script loaded');
 
-const emails = ["hbagalkote@gmail.com", "testemail1@gmail.com", "testemail2@gmail.com", "testemail3@gmail.com"];
-
 function clickFunction() {
 
     // get form fields
@@ -10,12 +8,11 @@ function clickFunction() {
     lname = document.getElementById('lname').value;
     intervention_teacher = document.getElementById('intervention_teacher').value;
 
-    // check to see email exists within list
-    intervention_teacher = intervention_teacher.toLowerCase();
-    // if (!emails.includes(intervention_teacher)) {
-    //     alert("Invalid teacher email." + "\n" + "Valid emails are: " + emails);
-    //     return;
-    // }
+    // make sure inputs are filled
+    if (student_id.length == 0 || fname.length == 0 || lname.length == 0 || intervention_teacher.length == 0) {
+        alert('Please fill out all fields!');
+        return;
+    }
 
     // send post request
     var xhr = new XMLHttpRequest();
@@ -27,4 +24,6 @@ function clickFunction() {
         'lname': lname,
         'intervention_teacher': intervention_teacher
     }));
+
+    alert('Form submitted')
 }
