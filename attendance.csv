@@ -1,4 +1,1 @@
-fname,lname,status
-nathanial,m,present
-bob,joe,absent
-terrence,terrence,wronglocation
+student_id,fname,lname,intervention_teacher
